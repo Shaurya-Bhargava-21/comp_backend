@@ -2,6 +2,7 @@
 // const asyncHandler = ()=>{}
 // const asyncHandler = (func)=>{()=>{}}
 // const asyncHandler = (fn) = () => {}
+// // asyncHandler is a helper to avoid writing try/catch in every async controller.
 const asyncHandler =  (fn) => async(req, res, next) =>{
     try{
         await fn(req, res, next);
